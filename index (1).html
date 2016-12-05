@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset=utf-8>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Overlock|Share+Tech+Mono|VT323');
+            body {
+                background-color:#000;
+                color:orange;
+            }
+            p {
+                color:#ffa500;
+                font-family:'VT323', monospace;
+            }
+            volcano {
+                font-style: bold;
+                font-family:'Overlock', cursive;
+                color:#ffa500;
+                clear:none;
+            }
+            date {
+                font-family:'Share Tech Mono', monospace;
+                clear:none;
+            }
+            h1 {
+                font-family:'Share Tech Mono', monospace;
+            }
+            .button {
+                border:5px solid orange;
+                background-color:#f00;
+                color:black;
+            }
+			.button:hover {
+				background-color: orange;
+				border-color:#f00;
+			}
+            img#location {
+                float:none;
+                width:150px;
+            }
+			def {
+				font-style:italic;
+			}
+        </style>
+        <title>Glacier Peak | Jacob Merrill and Machi Limas</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+         <h1><volcano>Glacier Peak</volcano> Volcano</h1>
+         <span class='button' id='locationShow'>Location:</span>
+        <p id="location">
+            <br>Glacier Peak is located only 70 miles away from Seattle.
+            <br/>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfWmjuGfpzz6tRhWGOO-ODYzPOANq6FuycaK34u1ZxraJSndn_qEbMh3g:pubs.usgs.gov/fs/2000/fs058-00/images/location.gif' id='location' alt='location of Glacier Peak' title='Location of Glacier Peak in Washington, compared to other volcanoes.'
+            />
+        </p>
+         <span id='historyShow' class='button'>History:</span>
+        <p id='history'>
+            <br>
+            <img src='http://pubs.usgs.gov/fs/2000/fs058-00/images/history.gif' width=500px title='Glacier Peaks eruption history; mostly small eruptions.'><About
+            <date>13000 years ago</date>,
+            <volcano>Glacier Peak</volcano> erupted very violently. The
+            <def title='large floods caused by dams of volcanic ash and debris'>lahars</def>were so large that they reached the sea.</p>
+         <span class='button' id='infoShow'>Type and information</span>
+        <div id='info'>
+            <p>
+                <volcano>Glacier Peak</volcano>is a composite volcano. It has over a <span title="...which is how it got its name.">dozen glaciers</span>, fresh looking domes of
+                <def title='a type of rock'>dacite</def>, and three hot springs.</p>
+            <p>It has explosive eruptions that spew out hot gas and debris. Its last massive eruption was in the <date>900's (CE)</date>. The last time it erupted was in the <date>1700's</date>. This makes <volcano>Glacier Peak</volcano> an active volcano.</p>
+			<p>it is currently 10,541 feet high (3212.9 meters). <volcano>Glacier Peak</volcano> and <volcano>Mt. St. Helens</volcano> are the only volcanoes in Washington State to have had a massive eruption in the past 15,000 years.</p>
+			<ul>Interesting things about the volcano:
+            <li>It has three summits: two false summits and one real summit.</li>
+            <li>it has camping, hiking, and flora, including the Showy Jacob's ladder and the Tiger Lily.</li>
+            <li>The Native American name is <def title='translation: The Great Parent'>"Takobia"</def>. It first appeared with its current name in <date>1898.</date></li>
+            </ul>
+        </div>
+		<span id='factsShow' class='button'>Fast Facts:</span>
+		<ul id='facts'>
+		<li>It erupted in six separate episodes.</li>
+		<li>It is the most remote of the five active volcanoes in Washington State.</li>
+		<li>Its big eryption in the 900's is comparable to Mt. St. Helens' eruption in 1980.</li>
+		<li>It is overlooked bu the general population because of its obscurity from its location and hight.</li>
+		<li>The original cone's age is unknown due to erosion from glaciers and eruptions from younger cones.</li>
+		</ul>
+		<span id='bibShow' class="button">Bibliography:</span>
+		<p id='bib'>
+			Program, Volcano Hazards. "USGS: Volcano Hazards Program CVO Glacier Peak." USGS: Volcano Hazards Program CVO Glacier Peak. N.p., 2 Feb. 2015. Web. 01 Dec. 2016.<br/>
+	"Glacier Peak." Glacier Peak : Climbing, Hiking %26 Mountaineering : SummitPost. N.p., n.d. Web. 03 Dec. 2016.<br/>
+	"Glacier Peak Volcano | Snohomish County, WA - Official Website." Glacier Peak Volcano | Snohomish County, WA - Official Website. N.p., n.d. Web. 03 Dec. 2016.<br/>
+	Glacier Peak's Eruption History. N.d. Glacier Peak. Web. 2 Dec. 2016.</p>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$("#location").hide();
+		$("#locationShow").on("click", function() {
+			$("#location").show();
+		});
+		$("#history").hide();
+		$("#historyShow").on("click", function() {
+			$("#history").show();
+		});
+		$("#info").hide();
+		$("#infoShow").on("click", function() {
+			$("#info").show();
+		});
+		$("#facts").hide();
+		$("#factsShow").on("click", function() {
+			$("#facts").show();
+		});
+		$("#bib").hide();
+		$("#bibShow").on("click", function() {
+		    $("#bib").show();
+		});
+	</script>
+    </body>
+
+</html>
